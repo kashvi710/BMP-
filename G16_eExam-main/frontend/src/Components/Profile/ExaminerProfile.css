@@ -1,0 +1,305 @@
+/* Global Styles */
+.studentpdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+#profilecontainer {
+    height: 80%;
+    width: 70%;
+    z-index: 700;
+    position: relative;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#profile-card {
+    background-color: #F9F7F7;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px 15px;
+    animation: fadeIn 0.8s ease-in-out;
+    gap: 20px;
+    flex-direction: row;
+}
+
+#reset-button {
+    width: 75%;
+    padding: 12px;
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 1rem auto;
+}
+
+#reset-button:hover {
+    background-color: #112D4E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar */
+#sbar {
+    background-color: #DBE2EF; /* Light blue background for sidebar */
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    gap: 130px;
+  
+}
+
+#content h2 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#profile-pic {
+    width: 40%;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 2px solid #3F72AF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+}
+
+#profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #112D4E; /* Dark blue text for sidebar */
+    transition: color 0.3s ease;
+}
+
+#profile-name:hover {
+    color: #3F72AF;
+}
+
+#profile-email {
+    color: #3F72AF; /* Blue-gray for email on sidebar */
+    font-size: 12px;
+}
+
+/* Content */
+#content {
+    flex-grow: 1;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+
+/* Form */
+#profile-form {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+   
+}
+
+#form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #3F72AF; /* Blue background for form fields */
+    padding: 4px;
+    border-radius: 8px;
+}
+
+#form-group label {
+    text-align: left;
+    font-size: 12px;
+    color: #F9F7F7; /* White text for better contrast on blue fields */
+    font-weight: bold;
+}
+
+#form-group > input {
+    flex: 1;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #DBE2EF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    margin: 4px;
+}
+
+#form-group input:focus {
+    border-color: #3F72AF;
+    box-shadow: 0 0 5px rgba(63, 114, 175, 0.5);
+    outline: none;
+}
+
+/* Save Button */
+#save-button {
+    /* position: absolute; */
+    bottom: 20px;
+    width: 75%;
+    padding: 12px;
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 1rem auto;
+}
+
+#save-button:hover {
+    background-color: #112D4E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profilebtns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Keyframe Animation for Profile Card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* On smaller screens, profile container takes full width and height */
+    #profilecontainer {
+        width: 90%;
+        height: 90%;
+    }
+
+    #profile-card {
+        flex-direction: column; /* Stack the profile card elements */
+        gap: 10px;
+        padding: 15px;
+    }
+
+    #sbar {
+        width: 100%; /* Sidebar takes full width */
+        margin-bottom: 15px;
+    }
+
+    #profile-pic {
+        width: 50%; /* Larger profile picture on smaller screens */
+    }
+
+    #profile-name {
+        font-size: 16px;
+    }
+
+    #profile-email {
+        font-size: 14px;
+    }
+
+    #content h2 {
+        font-size: 24px;
+    }
+
+    /* Form Adjustments */
+    #form-group {
+        flex-direction: column; /* Stack form fields on smaller screens */
+        padding: 10px;
+    }
+
+    #form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Buttons */
+    #reset-button, #save-button {
+        width: 90%;
+        padding: 15px;
+    }
+}
+#profilecontainer .select-branch-select:disabled {
+    color: #333; /* Same text color as non-disabled state */
+    background-color: #fff; /* Same background as non-disabled state */
+    opacity: 1; /* Prevent dimming effect */
+}
+@media (max-width: 480px) {
+    /* For very small screens */
+    #profilecontainer {
+        width: 100%;
+        height: 80%;
+    }
+
+    #profile-card {
+        padding: 10px;
+    }
+
+    #sbar {
+        padding: 15px;
+    }
+
+    #profile-pic {
+        width: 60%; /* Profile picture smaller on very small screens */
+    }
+
+    #profile-name {
+        font-size: 14px;
+    }
+
+    #profile-email {
+        font-size: 12px;
+    }
+
+    #content h2 {
+        font-size: 20px;
+    }
+
+    #form-group {
+        flex-direction: column;
+    }
+
+    #form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #reset-button, #save-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+

@@ -1,0 +1,94 @@
+.result-page {
+  background-color: white;
+  color: #112D4E;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.overall-performance > h2 {
+  color: #3F72AF;
+}
+
+.exam-result {
+  margin-top: 30px;
+  background-color: #DBE2EF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+  max-height: 400px; /* Height for the scrollable area */
+  overflow-y: auto; /* Enables vertical scrolling */
+  border: 1px solid #3F72AF;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #3F72AF;
+}
+
+th {
+  background-color: #3F72AF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #F9F7F7;
+}
+
+tr:nth-child(odd) {
+  background-color: #DBE2EF;
+}
+
+.exam-result>h3 {
+  color: #3F72AF;
+  font-size: 24px;
+}
+
+.charts-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px; /* Adds spacing between chart and pie chart */
+}
+
+.chart-container-progress-circle{
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.student-dashboard-td:hover{
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.overall-performance {
+  padding: 20px;
+  background-color: #F9F7F7;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {  /* For tablets and mobile screens */
+  .charts-container {
+    flex-direction: column;  /* Stack the pie chart below the graph */
+    align-items: center;     /* Center the elements */
+  }
+  .overall-performance {
+    padding: 15px;  /* Adjust padding for smaller screens */
+  }
+}

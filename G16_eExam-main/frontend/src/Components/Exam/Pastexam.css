@@ -1,0 +1,137 @@
+/* General page styles */
+.pastexam-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa; /* Soft grey background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header */
+.pastexam-container h2 {
+  text-align: center;
+  color: white; /* White text for contrast */
+  margin-bottom: 20px;
+  font-size: 24px;
+  background-color: #3F72AF; /* Green background */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Table styles */
+.pastexam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table-header {
+  display: flex;
+  background-color: #3F72AF
+  ; /* Green background for the header */
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.table-header .header-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.table-row {
+  display: flex;
+  padding: 15px;
+  margin: 20px;
+  background-color: #ffffff; /* White background for rows */
+  transition: background-color 0.3s ease;
+  border-bottom: 2px solid #f8f9fa; /* Soft separator between rows */
+  border-radius: 20px;
+}
+
+.table-row:nth-child(even) {
+  background-color: #DBE2EF
+  ; /* Light green for alternating rows */
+}
+
+.table-row:hover {
+  background-color: #316fc15d; /* Darker green hover effect #DBE2EF*/
+}
+
+.table-cell {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Details cell */
+.detail-cell {
+  text-align: center;
+  cursor: pointer;
+  color: #3F72AF; /* Green for text */
+  font-weight: bold;
+}
+
+.detail-cell:hover {
+  color: #DBE2EF
+  ; /* Darker green on hover */
+}
+
+/* Records info */
+.records-info {
+  text-align: right;
+  padding: 10px;
+  color: #666;
+  background-color: #f1f1f1;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .table-header, .table-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .table-header .header-item, .table-cell {
+    padding: 10px;
+  }
+}
+
+/* Button styles for details */
+.pbutton {
+  padding: 10px 15px;
+  background-color: #3F72AF  ; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.pbutton:hover {
+  background-color: #112D4E; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.pbutton:active {
+  background-color: #112D4E; /* Even darker on click */
+  transform: translateY(0); /* Return to original position */
+}
+
+.pbutton:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px 112D4E; /* Add a subtle glow on focus */
+}
+.past-exam-list-div{
+  max-height: 400px;
+  overflow-y: auto;
+}

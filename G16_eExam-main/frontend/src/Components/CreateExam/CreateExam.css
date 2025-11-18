@@ -1,0 +1,382 @@
+/* CreateExam.css */
+
+.create-exam-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Form container */
+  .create-exam-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option-input-input{
+    width:10%;
+  }
+  .option-input-option{
+    width:90%;
+  }
+  
+  .create-exam-form > h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .create-exam-form input[type="text"],
+  .create-exam-form input[type="date"],
+  .create-exam-form input[type="time"],
+  .create-exam-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-exam-form button ,.exam-preview-deletebtn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .create-exam-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .option-div{
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  
+  /* Exam Preview */
+  .exam-preview {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exam-preview-container{
+    max-height: 550px;
+    overflow-y: auto;
+  }
+  .exam-preview > h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .exam-preview > p {
+    margin: 5px 0;
+  }
+  
+  .exam-preview > h4 {
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  .question-preview {
+    margin-bottom: 15px;
+  }
+  
+  .question-preview > ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .correct-option {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Modal for Question Bank */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .question-item-input{
+    width:10%;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .question-bank {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+  }
+  
+  .step-one > textarea{
+    width: 100%;
+  }
+  
+  .question-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .question-item > label{
+    width: 10%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .create-exam-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .create-exam-form, .exam-preview {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .modal-content {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .create-exam-form h2,
+    .exam-preview h3 {
+      font-size: 1.2em;
+    }
+  
+    .create-exam-form button {
+      width: 100%;
+      margin-top: 8px;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.2em;
+    }
+  }
+  
+  .option-div::-webkit-scrollbar ,
+  .exam-preview-container::-webkit-scrollbar,
+  .question-bank::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .option-div::-webkit-scrollbar-thumb , 
+  .exam-preview-container::-webkit-scrollbar-thumb ,
+  .question-bank::-webkit-scrollbar-thumb  {
+    background-color: #3F72AF;
+    border-radius: 10px;
+  }
+  
+  .option-div::-webkit-scrollbar-track ,
+  .exam-preview-container::-webkit-scrollbar-track ,
+  .question-bank::-webkit-scrollbar-track {
+    background-color: #c0c6d2;
+  }
+  
+  /* Style for dropdown menu */
+  .create-exam-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Hover and focus styles for dropdown */
+  .create-exam-form select:hover {
+    border-color: #4CAF50;
+  }
+  
+  .create-exam-form select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+/* Modal Overlay */
+.create-exam-container .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Modal Content - Fix for stable width */
+.create-exam-container .modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px; /* Fixed width */
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Ensure scrolling for content overflow */
+  position: relative; 
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Optional: Prevent content shifting due to scrollbar */
+.create-exam-container .modal-content {
+  overflow: overlay; /* Modern browsers: keeps scrollbar over content */
+}
+
+/* For better cross-browser support */
+.create-exam-container .instructionList {
+  scrollbar-gutter: stable; /* Ensures scrollbar space doesn't push content */
+}
+
+
+/* Close Button */
+.create-exam-container .modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #3F72AF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.create-exam-container .modal-close-btn:hover {
+  background: #112D4E;
+}
+
+/* Instructions List */
+.create-exam-container .instructions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.create-exam-container .instructions-list li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-exam-container .instructions-list .exam-preview-deletebtn {
+  background-color: #3F72AF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.create-exam-container .instructions-list .exam-preview-deletebtn:hover {
+  background-color: #112D4E;
+}
+
+/* Add Spacing for Empty State */
+.no-instructions-message {
+  font-style: italic;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Scoped styles for the CreateExam component */
+.create-exam-container .view-instructions-btn {
+  background-color: #3F72AF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.create-exam-container .view-instructions-btn:hover {
+  background-color: #112D4E;
+}
+
+/* Scrollbar for instruction list inside modal */
+.create-exam-container .instructionList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 10px 0;
+  padding-right: 10px;
+}
+/* Scrollbar Styling */
+.create-exam-container .instructionList::-webkit-scrollbar {
+  width: 8px; /* Width of vertical scrollbar */
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+.create-exam-container .instructionList::-webkit-scrollbar-thumb {
+  background-color: #3F72AF; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded edges for smooth appearance */
+}
+
+.create-exam-container .instructionList::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for scrollbar track */
+}
+.clear-exam-btn {
+  background-color: #3F72AF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.clear-exam-btn:hover {
+  background-color: #112D4E;
+}

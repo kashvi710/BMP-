@@ -1,0 +1,199 @@
+.fetched-exam-container > h1{
+  color: #112D4E;
+}
+
+.fetched-exam-container{
+  width: 80%;
+  overflow-y: auto;
+}
+
+/* Scrollbar styles */
+.fetched-exam-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.fetched-exam-container::-webkit-scrollbar-thumb {
+  background-color: #3F72AF;
+  border-radius: 10px;
+}
+
+.fetched-exam-container::-webkit-scrollbar-track {
+  background-color: #c0c6d2;
+}
+.fetched-exam-container > h2,.fetched-exam-container >  h3 {
+  text-align: center;
+  font-weight: 600;
+  color: #112D4E;
+  margin-bottom: 20px;
+}
+
+.fetched-exam-container > input,.fetched-exam-container > select,.fetched-exam-container > button {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: black;
+}
+
+/* Main container */
+.fetched-exam-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-question {
+  margin-top: 40px;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-field {
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.select-field {
+  background-color: #f9f9f9;
+}
+
+.add-question-button {
+  background-color: #112D4E;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.input-field-select-field,.input-field{
+  width:100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.add-question-button:hover {
+  background-color: #0a396fe5;
+}
+
+.add-question-button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* Question list styles */
+.existing-questions {
+  margin-top: 30px;
+}
+
+.question-list {
+  list-style: none;
+  padding: 0;
+}
+
+.question-item {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question-item strong {
+  font-size: 16px;
+}
+
+.options-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.option {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.option.correct {
+  color: black;
+}
+
+.question-item p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Option input styling */
+.option-div {
+  margin-top: 20px;
+}
+
+.option-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.option-input-input {
+  margin-right: 10px;
+}
+
+.option-input input[type="text"] {
+  width: calc(100% - 30px);
+  font-size: 14px;
+  padding: 8px;
+}
+
+.option-input input[type="radio"] {
+  margin-right: 10px;
+  width: 10%;
+}
+
+/* Select dropdown styles */
+select {
+
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+select:focus {
+  
+  border-color: #112D4E;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fetched-exam-container {
+    padding: 15px;
+  }
+
+  .create-question {
+    margin-top: 20px;
+  }
+
+  .input-field, .select-field, .add-question-button {
+    font-size: 14px;
+  }
+
+  .question-item {
+    padding: 15px;
+  }
+}
